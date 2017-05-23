@@ -31,14 +31,28 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+xt = features_train
+yt = labels_train
+xs = features_test
+ys = labels_test
+
+for i in yt[:10]:
+    print i
+
+# from sklearn.naive_bayes import GaussianNB
+# clf = GaussianNB()
+# clf.fit(xt, yt)
+
+# pred = clf.predict(xs)
+
+# from sklearn.metrics import accuracy_score
+# score = accuracy_score(pred,ys)
+# print score
 
 
+# try:
+#     prettyPicture(clf, features_test, labels_test)
+#     print score
+# except NameError:
+#     pass
 
-
-
-
-
-try:
-    prettyPicture(clf, features_test, labels_test)
-except NameError:
-    pass

@@ -22,12 +22,27 @@ from email_preprocess import preprocess
 features_train, features_test, labels_train, labels_test = preprocess()
 
 
-
-
 #########################################################
 ### your code goes here ###
 
+xt = features_train
+yt = labels_train
+xs = features_test
+ys = labels_test
 
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()
+clf.fit(xt, yt)
+
+pred = clf.predict(xs)
+
+from sklearn.metrics import accuracy_score
+score = accuracy_score(pred,ys)
+print score
 #########################################################
-
+'''
+no. of Chris training emails: 7936
+no. of Sara training emails: 7884
+0.973265073948
+'''
 

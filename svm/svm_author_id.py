@@ -30,17 +30,22 @@ xt = features_train
 yt = labels_train
 xs = features_test
 ys = labels_test
+'''
 #for i in xt[0:10]:
     #print i
+'''
 from sklearn.naive_bayes import GaussianNB
 clf = SVC(kernel='linear')
 clf.fit(xt, yt)
+'''
 #SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
     #decision_function_shape=None, degree=3, gamma='auto', kernel='rbf',
     #max_iter=-1, probability=False, random_state=None, shrinking=True,
     #tol=0.001, verbose=False)
+'''
 pred = clf.predict(xs)
 
+#check accuracy
 from sklearn.metrics import accuracy_score
 score = accuracy_score(pred,ys)
 print score
@@ -50,6 +55,7 @@ print "Total  time(s):", round(time()-t0, 3), "s"
 print "Total  time(m):", round(time()-t0, 3)/60, "m"
 
 #########################################################
+### Answer ###
 '''
 no. of Chris training emails: 7936
 no. of Sara training emails: 7884
@@ -57,3 +63,4 @@ no. of Sara training emails: 7884
 Total  time(s): 161.095 s
 Total  time(m): 2.68491666667 m
 '''
+#########################################################

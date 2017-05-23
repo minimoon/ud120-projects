@@ -25,7 +25,22 @@ features_train, features_test, labels_train, labels_test = preprocess()
 #########################################################
 ### your code goes here ###
 
+xt = features_train
+yt = labels_train
+xs = features_test
+ys = labels_test
+### your code goes here ###
+from sklearn import tree
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(xt, yt)
+pred = clf.predict(xs)
+
+from sklearn.metrics import accuracy_score
+score = accuracy_score(pred,ys)
+print score
 
 #########################################################
-
+'''
+0.98976109215
+'''
 

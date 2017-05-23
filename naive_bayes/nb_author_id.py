@@ -41,8 +41,6 @@ score = accuracy_score(pred,ys)
 print score
 #########################################################
 '''
-no. of Chris training emails: 7936
-no. of Sara training emails: 7884
 0.973265073948
 '''
 
